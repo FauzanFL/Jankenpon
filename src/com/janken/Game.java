@@ -33,49 +33,88 @@ public class Game {
     }
 
     void proses(String player){
-        if (player.equals(gunting)){
-            System.out.println("Player memilih gunting");
-            if (lawan().equals(kertas)){
-                System.out.println("Lawan memilih kertas");
-                System.out.println("Player menang!!");
-                skorp += 1;
-            } else if(lawan().equals(batu)){
-                System.out.println("Lawan memilih batu");
-                System.out.println("Player kalah!!");
-                skorl += 1;
+        String musuh = lawan();
+        if (player.equals(musuh)){
+            System.out.println("Player memilih "+player);
+            System.out.println("Lawan memilih "+musuh);
+            System.out.println("DRAWW!!");
+        } else if(player.equals(gunting)){
+            System.out.println("Player memilih "+player);
+            if (musuh.equals(kertas)){
+                System.out.println("Lawan memilih "+musuh);
+                System.out.println("WIN!!");
+                skorp++;
             } else {
-                System.out.println("Lawan memilih gunting");
-                System.out.println("DRAWW!!");
+                System.out.println("Lawan memilih "+musuh);
+                System.out.println("LOSE!!");
+                skorl++;
             }
-        } else if (player.equals(kertas)){
-            System.out.println("Player memilih kertas");
-            if (lawan().equals(batu)){
-                System.out.println("Lawan memilih batu");
-                System.out.println("Player menang!!");
-                skorp += 1;
-            } else if (lawan().equals(gunting)){
-                System.out.println("Lawan memilih gunting");
-                System.out.println("Player kalah!!");
-                skorl += 1;
+        } else if(player.equals(kertas)){
+            System.out.println("Player memilih "+player);
+            if (musuh.equals(batu)){
+                System.out.println("Lawan memilih "+musuh);
+                System.out.println("WIN!!");
+                skorp++;
             } else {
-                System.out.println("Lawan memilih kertas");
-                System.out.println("DRAWW!!");
+                System.out.println("Lawan memilih "+musuh);
+                System.out.println("LOSE!!");
+                skorl++;
             }
-        } else if (player.equals(batu)){
-            System.out.println("Player memilih batu");
-            if (lawan().equals(gunting)){
-                System.out.println("Lawan memilih gunting");
-                System.out.println("Player menang!!");
-                skorp += 1;
-            } else if (lawan().equals(kertas)) {
-                System.out.println("Lawan memilih kertas");
-                System.out.println("Player kalah!!");
-                skorl += 1;
+        } else if(player.equals(batu)){
+            System.out.println("Player memilih "+player);
+            if (musuh.equals(gunting)){
+                System.out.println("Lawan memilih "+musuh);
+                System.out.println("WIN!!");
+                skorp++;
             } else {
-                System.out.println("Lawan memilih batu");
-                System.out.println("DRAWW!!");
+                System.out.println("Lawan memilih "+musuh);
+                System.out.println("LOSE!!");
+                skorl++;
             }
         }
+//        if (player.equals(gunting)){
+//            System.out.println("Player memilih gunting");
+//            if (lawan().equals(kertas)){
+//                System.out.println("Lawan memilih kertas");
+//                System.out.println("Player menang!!");
+//                skorp += 1;
+//            } else if(lawan().equals(batu)){
+//                System.out.println("Lawan memilih batu");
+//                System.out.println("Player kalah!!");
+//                skorl += 1;
+//            } else {
+//                System.out.println("Lawan memilih gunting");
+//                System.out.println("DRAWW!!");
+//            }
+//        } else if (player.equals(kertas)){
+//            System.out.println("Player memilih kertas");
+//            if (lawan().equals(batu)){
+//                System.out.println("Lawan memilih batu");
+//                System.out.println("Player menang!!");
+//                skorp += 1;
+//            } else if (lawan().equals(gunting)){
+//                System.out.println("Lawan memilih gunting");
+//                System.out.println("Player kalah!!");
+//                skorl += 1;
+//            } else {
+//                System.out.println("Lawan memilih kertas");
+//                System.out.println("DRAWW!!");
+//            }
+//        } else if (player.equals(batu)){
+//            System.out.println("Player memilih batu");
+//            if (lawan().equals(gunting)){
+//                System.out.println("Lawan memilih gunting");
+//                System.out.println("Player menang!!");
+//                skorp += 1;
+//            } else if (lawan().equals(kertas)) {
+//                System.out.println("Lawan memilih kertas");
+//                System.out.println("Player kalah!!");
+//                skorl += 1;
+//            } else {
+//                System.out.println("Lawan memilih batu");
+//                System.out.println("DRAWW!!");
+//            }
+//        }
     }
 
     void skor(){
